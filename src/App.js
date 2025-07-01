@@ -1,25 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-function App() {
+import Dashboard from './components/dashboard';
+import Layout from './components/layout';
+import Project from './components/project'
+import Call from './components/call'
+import Agent from './components/agent'
+import Sentiment from './components/sentiment'
+import Chatbot from './components/chatbot'
+import Whatsapp from './components/whatsapp'
+import SecondLayout from './layout2/link'
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Dashboard />} />
+          <Route path='/project' element={<Project />} />
+          <Route path='/call' element={<Call />} />
+          <Route path='/agent' element={<Agent />} />
+          <Route path='/sentiment' element={<Sentiment />} />
+          <Route path='/chatbot' element={<Chatbot />} />
+          <Route path='/whatsapp' element={<Whatsapp />} />
+        </Route>
+
+
+        <Route path="/admin/*" element={<SecondLayout />}/>
+          
+       
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;

@@ -77,13 +77,13 @@
 .subHeading {
   font-size: 10px;
 }
-/* .insideSB{
-  background: linear-gradient(to right, white, grey);
-color:linear-gradient(to right, white, grey);
-margin-left: -16px;
-margin-top: -10px;
 
-} */
+@media screen and (max-width:320px) {
+  .subHeading {
+    display: none;
+  }
+}
+
 .notif-badge {
   position: absolute;
   top: -5px;
@@ -95,7 +95,40 @@ margin-top: -10px;
   font-size: 12px;
   font-weight: bold;
 }
- .emoji{
+
+.emoji {
   font-size: 30px !important;
-   color: white;
- }
+  color: white;
+}
+
+.fetchImg {
+  height: 200px;
+  width: -webkit-fill-available;
+}
+
+.mainImg {
+  height: 120px;
+}
+
+.link:hover {
+  background-color: skyblue;
+  color: white;
+}
+
+.imag1 {
+  width: 240px;
+  height: 200px;
+}
+
+.loading {
+  height: 100vh;
+}
+
+.productLink {
+  text-decoration: none;
+  color: black;
+}
+
+.headingLink:hover {
+  background-color: skyblue;
+}

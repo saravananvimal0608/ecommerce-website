@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-import ProductList from './ProductList'
+import ProductList from '../../ApiIntegration/UserList'
 import Loader from './Loader'
 
 const Project = () => {
@@ -24,9 +24,9 @@ const Project = () => {
 
     <div className="container mt-4">
       {!status ? (
-        <Loader/>
+        <Loader />
       ) : (
-        <ProductList product={product}  hideLink/>
+        <ProductList product={product} />
       )}
     </div>
 

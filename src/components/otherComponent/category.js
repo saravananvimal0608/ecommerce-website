@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import ProductList from './ProductList'
+import ProductList from '../../ApiIntegration/UserList'
 import Loader from './Loader'
 
 const Call = () => {
@@ -30,7 +30,7 @@ const Call = () => {
           <h2>Category: {category}</h2>
           <div className="row">
             {categories.map(product => (
-              <ProductList product={product} showImage link={"test"} />
+              <ProductList product={product} />
             ))}
           </div>
         </>

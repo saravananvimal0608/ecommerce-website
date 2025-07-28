@@ -1,7 +1,8 @@
-import Sidebar from '../components/sidebar'
+import Sidebar from '../otherComponent/sidebar'
 import { Outlet } from 'react-router-dom'
-import Nav from '../components/nav'
-import {useState} from 'react'
+import Nav from './nav'
+import { useState } from 'react'
+
 
 
 const Layout = () => {
@@ -12,10 +13,10 @@ const Layout = () => {
     }
 
     return (
-        <div className="">
-            <Sidebar isOpen = {isOpen} setIsOpen = {setIsOpen}/>
+        <div >
+            <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
             <div className="main-content p-3">
-                <Nav handleToggle={handleToggle}/>
+                <Nav handleToggle={handleToggle} />
                 <Outlet />
             </div>
         </div>

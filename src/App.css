@@ -107,7 +107,7 @@
 }
 
 .mainImg {
-  height: 120px;
+  height: 200px;
 }
 
 .link:hover {
@@ -120,7 +120,7 @@
   height: 200px;
 }
 
-.loading {
+.Loader {
   height: 100vh;
 }
 
@@ -131,4 +131,101 @@
 
 .headingLink:hover {
   background-color: skyblue;
+}
+
+.para:hover {
+  background-color: red;
+}
+
+.form {
+  background-color: lightgray;
+}
+
+
+.loading {
+  height: 100vh;
+
+}
+
+.load {
+  background-color: rgba(0, 0, 0, 0.5);
+  z-Index: 10;
+  margin-top: -16px;
+}
+
+.eyeSymbol {
+  position: absolute;
+  margin-left: 96%;
+  margin-top: -32px;
+}
+
+.eyeSymbol1 {
+  position: absolute;
+  top: 55%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #6c757d;
+}
+
+.avatarImg {
+  width: 100px;
+  height: 100px;
+  border-Radius: 50%;
+  object-Fit: cover;
+}
+
+.uploadImage {
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
+}
+
+.texthide {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+.linkCategory {
+  text-decoration: none;
+  color: black;
+}
+
+.texthide:hover {
+  background-color: none !important;
+}
+
+.hidetd {
+  display: none;
+  z-index: 1000;
+  left: -139%;
+  bottom: -24px;
+  background-color: white;
+  padding: 9px;
+  height: 94px;
+  width: 180px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hidetd1 {
+  display: none;
+  z-index: 1000;
+  left: -122%;
+  bottom: -24px;
+  background-color: white;
+  padding: 9px;
+  height: 94px;
+  width: 180px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.threeDot:hover .hidetd,
+.threeDot:hover .hidetd1 {
+  display: block;
 }

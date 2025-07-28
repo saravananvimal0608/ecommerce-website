@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import List from './List.js'
-import ProductList from './ProductList.js'
+
 import Loader from './Loader.js'
+
 
 
 const Dashboard = () => {
@@ -31,11 +31,7 @@ const Dashboard = () => {
 
       <div className="d-flex justify-content-start">
         <div className="d-flex flex-wrap gap-3 mb-2 ">
-          <p className='heading1'><strong>categories:</strong></p>
-          {[...new Set(products.map(product => product.category))].map((category, index) => (
-            <List index={index} category={category} />
-          ))}
-
+        
         </div>
       </div>
 
@@ -49,7 +45,8 @@ const Dashboard = () => {
         ) : (
           <div className="row">
             {products?.length ? products.map(product => (
-              <ProductList product={product} link={"project"} hidePrice />
+              // <ProductList product={product} link={"project"} />
+              <p></p>
 
             )) : <p>no data found</p>
             }
